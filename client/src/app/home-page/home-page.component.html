@@ -1,0 +1,23 @@
+<div class="container">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        header / {{isLoggedIn}} //
+        <button (click)="test()">test</button>
+      </div>
+      <div *ngIf="isLoggedIn == 1">
+        loading...
+      </div>
+      <div *ngIf="isLoggedIn == 2">
+        <p class="navbar-text navbar-right">Logged In: {{user_displayName}} ({{user_email}}) / {{user_uid}}<p>
+        <button (click)="logout()">Logout</button>
+      </div>
+      <div *ngIf="isLoggedIn == 3">
+        asdfg
+        <app-login></app-login>
+      </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
